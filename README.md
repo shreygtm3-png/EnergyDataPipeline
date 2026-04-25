@@ -7,10 +7,10 @@ By utilizing the Global Power Plant Database, I developed a modular, class-based
 
 ### Technical Approach
 
-1. Object-Oriented Architecture (OOP)
+1. Object-Oriented Architecture (OOP):
 The pipeline is refactored from a procedural script into a modular PowerPlantETL class. This approach improves maintainability, allows for easier unit testing, and follows industry-standard software engineering patterns.
 
-2. High-Performance Ingestion
+2. High-Performance Ingestion:
 Instead of a standard load, the pipeline uses strategic schema definitions:
 
 - Downcasting: Capacity metrics are stored as float32.
@@ -19,7 +19,7 @@ Instead of a standard load, the pipeline uses strategic schema definitions:
 
 - Result: Reduced the initial memory footprint by approximately 90%, ensuring stability on limited-resource environments.
 
-3. Contextual Data Repair (Data Science Logic)
+3. Contextual Data Repair (Data Science Logic):
 Real-world data is rarely complete. Rather than using a generic "fill-all" approach for missing commissioning years, the script uses a grouped median strategy. It calculates the median age of plants within the specific fuel category (e.g., matching a missing Hydro plant year with other Hydro plants), preserving the statistical integrity of the timeline.
 
 4. Advanced Feature Engineering
