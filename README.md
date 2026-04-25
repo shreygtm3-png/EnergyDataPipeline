@@ -22,14 +22,14 @@ Instead of a standard load, the pipeline uses strategic schema definitions:
 3. Contextual Data Repair (Data Science Logic):
 Real-world data is rarely complete. Rather than using a generic "fill-all" approach for missing commissioning years, the script uses a grouped median strategy. It calculates the median age of plants within the specific fuel category (e.g., matching a missing Hydro plant year with other Hydro plants), preserving the statistical integrity of the timeline.
 
-4. Advanced Feature Engineering
+4. Advanced Feature Engineering:
 The pipeline classifies facilities into "Renewable" and "Non-Renewable" categories using vectorized operations. It also calculates renewable_capacity_mw as a specific feature for immediate green-energy analytics.
 
 ### Tools and Infrastructure
-Language        -> Python |
-Data Processing -> Pandas |
+Language        -> Python | 
+Data Processing -> Pandas | 
 Database Engine -> SQLAlchemy | 
-Storage         -> PostgreSQL (Relational) |
+Storage         -> PostgreSQL (Relational) | 
 Workflow        -> Object-Oriented ETL Class
 
 ### Getting Started
